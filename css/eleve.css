@@ -1,0 +1,40 @@
+.content h2 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}                   
+
+form {
+    background-color: #f8f9fa;
+    padding: 110px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-label {
+    font-weight: bold;
+}
+.form-control, .form-select {
+    border-radius: 4px;
+    box-shadow: none;
+    border: 1px solid #ced4da;
+}
+
+.btn {
+    font-weight: bold;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+
+.d-flex.justify-content-between{
+    position: relative;
+    top: 100px;
+}
