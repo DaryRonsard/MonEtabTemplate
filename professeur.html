@@ -40,18 +40,18 @@
             
             <div class="mt-auto">
                 <hr>
-                <a href="#" class="btn btn-danger btn-block"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+                <a href="index.html" class="btn btn-danger btn-block"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
             </div>
         </nav>
         
         <div class="content p-4">
             <h2 class="mb-4">Professeurs (2)</h2>
             <div class="d-flex justify-content-end mb-4">
-                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#AjouteprofesseurModal"><i class="fas fa-plus-circle"></i> Nouveau Professeurs</button>
+                <a href="ajoueProf.html" class="btn btn-blue btn-block"><button class="btn btn-primary" ><i class="fas fa-plus-circle"></i> Nouveau Professeurs</button></a>
             </div>
             <table class="table table-striped table-bordered">
                 <thead class="thead-dark">
-                    <tr>AjouteprofesseurModal
+                    <tr>
                         <th scope="col">Nom</th>
                         <th scope="col">Prénom</th>
                         <th scope="col">Matiere</th>
@@ -74,8 +74,8 @@
                         <td>0123456789</td>
                         <td>Touba</td>
                         <td>
-                            <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#ModificationprofesseurModal"><i class="fas fa-edit"></i> Modifier</button>
-                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal"><i class="fas fa-trash"></i>Supprimer</button>
+                            <a href="ModifieProf.html" class="btn btn-warning btn-sm btn-custom"><i class="fas fa-edit"></i> Modifier</a>
+                            <button class="btn btn-danger btn-sm btn-custom" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal"><i class="fas fa-trash"></i> Supprimer</button>
                         </td>
                     </tr>
                     <tr>
@@ -88,9 +88,8 @@
                         <td>0123456789</td>
                         <td>Bouaké</td>
                         <td>
-                            <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#ModificationprofesseurModal"><i class="fas fa-edit"></i> Modifier</button>
-                          
-                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal"><i class="fas fa-trash"></i>Supprimer</button>
+                            <a href="ModifieProf.html" class="btn btn-warning btn-sm btn-custom"><i class="fas fa-edit"></i> Modifier</a>
+                            <button class="btn btn-danger btn-sm btn-custom" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal"><i class="fas fa-trash"></i> Supprimer</button>
                         </td>
                     </tr>
                 </tbody>
@@ -105,7 +104,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    Voulez-vous vraiment supprimer cet élève ?
+                    Voulez-vous vraiment supprimer cet professeur ?
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
@@ -117,158 +116,7 @@
     </div>
 
 
-    <!--modale modification-->
-    <div class="modal fade" id="ModificationprofesseurModal" tabindex="-1" aria-labelledby="ModificationprofesseurLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title text-center" id="ModificationprofesseurLabel">Modification !!</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="modifier-eleve-form">
-                        <div class="row g-3">
-                            <div class="col-md-12">
-                                <label for="prenom" class="form-label">Prénom</label>
-                                <input type="text" class="form-control" id="prenom" value="Kouakou">
-                            </div>
-                            <div class="col-md-12">
-                                <label for="classe" class="form-label">Classe</label>
-                                <select class="form-select" id="classe">
-                                    <option selected>Math</option>
-                                    <option selected>Physique</option>
-                                    <option selected>EPS</option>
-                                    <option selected>Anglais</option>
-                                    <option selected>SVT</option>
-                                    <option selected>Phylosophie</option>
-                                    <option selected>Francais</option>
-                                    <option selected>Autres options ici </option>
-                                </select>
-                            </div>
-                            <div class="col-md-12">
-                                <label for="nom" class="form-label">Nom</label>
-                                <input type="text" class="form-control" id="nom" value="George">
-                            </div>
-                            <div class="col-md-12">
-                                <label for="telephone" class="form-label">Téléphone</label>
-                                <input type="text" class="form-control" id="telephone" value="0123456789">
-                            </div>
-                            <div class="col-md-12">
-                                <label class="form-label">Genre</label><br>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="genre" id="homme" value="Homme" checked>
-                                    <label class="form-check-label" for="homme">Homme</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="genre" id="femme" value="Femme">
-                                    <label class="form-check-label" for="femme">Femme</label>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <label for="lieu-naissance" class="form-label">Lieu de naissance</label>
-                                <input type="text" class="form-control" id="lieu-naissance" value="Dabou">
-                            </div>
-                            <div class="col-md-12">
-                                <label for="identification" class="form-label">Numéro d'identification</label>
-                                <input type="text" class="form-control" id="identification" value="001083737">
-                            </div>
-                            <div class="col-md-12">
-                                <label for="date-naissance" class="form-label">Date de naissance</label>
-                                <input type="date" class="form-control" id="date-naissance" value="1992-08-12">
-                            </div>
-                        </div>
-                    
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                    <button type="button" class="btn btn-danger" id="confirmDeleteButton">Supprimer</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
-
-    <!--modale Ajouter prof-->
-    <div class="modal fade" id="AjouteprofesseurModal" tabindex="-1" aria-labelledby="AjouteprofesseurLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title text-center" id="AjouteprofesseurLabel">Ajouter Professeurs !!</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="mb-3">
-                                    <label for="nom" class="form-label">Nom</label>
-                                    <input type="text" class="form-control" id="nom" placeholder="Nom">
-                                </div>
-                                <div class="mb-12">
-                                    <label for="prenom" class="form-label">Prénom</label>
-                                    <input type="text" class="form-control" id="prenom" placeholder="Prénom">
-                                </div>
-                                <div class="mb-12">
-                                    <label for="genre" class="form-label">Genre</label><br>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="genre" id="homme" value="Homme">
-                                        <label class="form-check-label" for="homme">Homme</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="genre" id="femme" value="Femme">
-                                        <label class="form-check-label" for="femme">Femme</label>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="mb-12">
-                                            <label for="matricule" class="form-label">Matricule</label>
-                                            <input type="text" class="form-control" id="matricule" placeholder="Matricule">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="mb-12">
-                                            <label for="date-naissance" class="form-label">Date de naissance</label>
-                                            <input type="date" class="form-control" id="date-naissance">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="mb-12">
-                                    <label for="classe" class="form-label">Sélectionner une Matiere</label>
-                                    <select class="form-select" id="classe">
-                                        <option selected>Math</option>
-                                        <option selected>Physique</option>
-                                        <option selected>EPS</option>
-                                        <option selected>Anglais</option>
-                                        <option selected>SVT</option>
-                                        <option selected>Phylosophie</option>
-                                        <option selected>Francais</option>
-                                        <option selected>Autres options ici </option>
-                                    </select>
-                                </div>
-                                <div class="mb-12">
-                                    <label for="telephone" class="form-label">Téléphone</label>
-                                    <input type="tel" class="form-control" id="telephone" placeholder="Téléphone">
-                                </div>
-                                <div class="mb-12">
-                                    <label for="ville" class="form-label">Ville</label>
-                                    <input type="text" class="form-control" id="ville" placeholder="Ville">
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                    <button type="button" class="btn btn-danger" id="confirmDeleteButton">Supprimer</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
     </div>

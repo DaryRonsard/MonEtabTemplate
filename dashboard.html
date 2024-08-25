@@ -18,11 +18,12 @@
                 <img src="images/etat.jpg" alt="LogoMonEtab" class="img-fluid" style="width: 50px;">
                 <h4>Mon Etab</h4>
             </div>
+            <hr>
             <ul class="nav flex-column">
                 <li class="nav-item">
                     <a class="nav-link active" href="dashboard.html"><i class="fas fa-tachometer-alt"></i>Tableau de bord</a>
                 </li>
-                <hr>
+                
                 <li class="nav-item">
                     <a class="nav-link" href="eleve.html"><i class="fas fa-user-graduate"></i>Élèves</a>
                 </li>
@@ -39,7 +40,7 @@
             
             <div class="mt-auto">
                 <hr>
-                <a href="#" class="btn btn-danger btn-block"><i class="fas fa-sign-out-alt"></i>Déconnexion</a>
+                <a href="index.html" class="btn btn-danger btn-block"><i class="fas fa-sign-out-alt"></i>Déconnexion</a>
             </div>
         </nav>
         
@@ -75,7 +76,34 @@
                         <div class="card-body">
                             <h5 class="card-title">Élève par genre</h5>
                             <div id="pie-chart">
-                                <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+                                <canvas id="myChart" style="width:100%;max-width:600px"></canvas>  
+                            </div>
+                            <script>
+                                const xValues = ["Homme", "Femme"];
+                                const yValues = [55, 45];
+                                const barColors = ["#adaaa2", "#524f49"];              
+                                new Chart("myChart", {
+                                    type: "pie",
+                                    data: {
+                                        labels: xValues,
+                                        datasets: [{
+                                            backgroundColor: barColors,
+                                            data: yValues
+                                        }]
+                                    },
+                                    
+                                    options: {
+                                        title: {
+                                            display: true,
+                                        },
+                                        responsive: true, 
+                                        maintainAspectRatio: false, 
+                                    }
+                                });
+                            </script>
+                        </div>
+                    </div>
+
                             </div>
                         </div>
                     </div>

@@ -23,10 +23,10 @@
                 </li>
                 <hr>
                 <li class="nav-item">
-                    <a class="nav-link active" href="eleve.html"><i class="fas fa-user-graduate"></i> Élèves</a>
+                    <a class="nav-link" href="eleve.html"><i class="fas fa-user-graduate"></i> Élèves</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="professeur.html"><i class="fas fa-chalkboard-teacher"></i> Professeurs</a>
+                    <a class="nav-link active" href="professeur.html"><i class="fas fa-chalkboard-teacher"></i> Professeurs</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="Utilisateur.html"><i class="fas fa-users"></i> Utilisateurs</a>
@@ -45,11 +45,11 @@
         <!-- Content -->
         <div class="col-md-10 ms-sm-auto col-lg-10 px-md-4">
             <div class="d-flex justify-content-between align-items-center pt-3 pb-2 mb-3 border-bottom">
-                <h1 class="h2">Modifier l'élève - 245</h1>
-                <a href="eleve.html" class="btn btn-secondary">Retour</a>
+                <h1 class="h2">Modifier Professeur - 245</h1>
+                <a href="professeur.html" class="btn btn-secondary">Retour</a>
             </div>
 
-            <!-- Formulaire de modification -->
+
             <form id="modifier-eleve-form">
                 <div class="row g-3">
                     <div class="col-md-4">
@@ -59,13 +59,14 @@
                     <div class="col-md-4">
                         <label for="classe" class="form-label">Classe</label>
                         <select class="form-select" id="classe">
-                            <option selected>Tle</option>
-                            <option selected>1 er</option>
-                            <option selected>2 nd</option>
-                            <option selected>3</option>
-                            <option selected>4</option>
-                            <option selected>5</option>
-                            <option selected>6</option>
+                            <option>Selectioner une Matiere</option>
+                            <option>Maths</option>
+                            <option>Physique</option>
+                            <option>EPS</option>
+                            <option>Anglais</option>
+                            <option>SVT</option>
+                            <option>Phylosophie</option>
+                            <option>Francais</option>
                             <option selected>Autres options ici </option>
                         </select>
                     </div>
@@ -102,7 +103,7 @@
                     </div>
                 </div>
                 <div class="mt-4 d-flex justify-content-between">
-                     <button type="button" class="btn btn-danger">Annuler</button>
+                    <button type="button" class="btn btn-danger">Annuler</button>
                     <button type="submit" class="btn btn-success">Enregistrer</button>
                 </div>
             </form>

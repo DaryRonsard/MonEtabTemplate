@@ -18,11 +18,12 @@
                 <img src="images/etat.jpg" alt="LogoMonEtab" class="img-fluid" style="width: 50px;">
                 <h4>Mon Etab</h4>
             </div>
+            <hr>
             <ul class="nav flex-column">
                 <li class="nav-item">
                     <a class="nav-link" href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Tableau de bord</a>
                 </li>
-                <hr>
+                
                 <li class="nav-item">
                     <a class="nav-link active" href="eleve.html"><i class="fas fa-user-graduate"></i> Élèves</a>
                 </li>
@@ -39,14 +40,14 @@
             
             <div class="mt-auto">
                 <hr>
-                <a href="#" class="btn btn-danger btn-block"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+                <a href="index.html" class="btn btn-danger btn-block"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
             </div>
         </nav>
         
         <div class="content p-4">
             <h2 class="mb-4">Élèves (2)</h2>
             <div class="d-flex justify-content-end mb-4">
-                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#AjouteprofesseurModal"><i class="fas fa-plus-circle"></i> Nouveau Élèves</button>
+                <a href="ajoueEleve.html" class="btn btn-blue btn-block"><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#AjouteprofesseurModal"><i class="fas fa-plus-circle"></i> Nouveau Élèves</button></a>
             </div>
             <table class="table table-striped table-bordered">
                 <thead class="thead-dark">
@@ -72,9 +73,20 @@
                         <td>25</td>
                         <td>0123456789</td>
                         <td>Bonoua</td>
+                        <style>
+                       
+                            .btn-custom {
+                                display: inline-block;
+                                width: 100px; 
+                                text-align: center; 
+                                padding: 5px; 
+                                font-size: 14px; 
+                            }
+                        </style>
+                        
                         <td>
-                            <button class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Modifier</button>
-                            <button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Supprimer</button>
+                            <a href="modifieEleve.html" class="btn btn-warning btn-sm btn-custom"><i class="fas fa-edit"></i> Modifier</a>
+                            <button class="btn btn-danger btn-sm btn-custom" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal"><i class="fas fa-trash"></i> Supprimer</button>
                         </td>
                     </tr>
                     <tr>
@@ -87,8 +99,9 @@
                         <td>0123456789</td>
                         <td>Abidjan</td>
                         <td>
-                            <button class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Modifier</button>
-                            <button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Supprimer</button>
+                            
+                            <a href="modifieEleve.html" class="btn btn-warning btn-sm btn-custom"><i class="fas fa-edit"></i> Modifier</a>
+                            <button class="btn btn-danger btn-sm btn-custom" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal"><i class="fas fa-trash"></i> Supprimer</button>
                         </td>
                     </tr>
                 </tbody>
@@ -176,6 +189,25 @@
         </div>
     </div>
     
+
+
+    <div class="modal fade" id="deleteConfirmationModal" tabindex="-1" aria-labelledby="deleteConfirmationModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center" id="deleteConfirmationModalLabel">ATTENTION !!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Voulez-vous vraiment supprimer cet élève ?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                    <button type="button" class="btn btn-danger" id="confirmDeleteButton">Supprimer</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     </div>
 
